@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --cor-lilas: hsl(252, 100%, 67%);
+    --cor-azul: hsl(241, 81%, 54%);
+    --cor-cinzaclaro: hsl(241, 100%, 89%);
+    --cor-cinzamaisclaro:hsl(226, 7%, 65%);
+    --cor-branco: hsl(0, 0%, 100%);
+    --cor-azulcinzaescuro: hsl(224, 30%, 27%);
+    --violeta-circulo: hsla(256, 72%, 46%, 1);
+    --azul-circulo: hsla(241, 72%, 46%, 0);
+    --vermelho-claro: hsl(0, 100%, 67%);
+    --vermelho-maisclaro: #FAF0E6;
+    --laranja-amarelo: hsl(39, 100%, 56%);
+    --laranja-amareloclaro: rgb(246, 248, 231);
+    --verde: hsl(166, 100%, 37%);
+    --verde-claro: hsl(166, 48%, 81%);
+    --azul-cobalto: hsl(234, 85%, 45%);
+    --azul-cobaltoclaro: hsl(235, 60%, 88%);
+    --fonte-principal: 'Hanken Grotesk', sans-serif;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Procurar entender o que é border-box*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--fonte-principal);
+} 
+
+
+section{
+    border-radius: 7%;
+    box-shadow: 15px 15px 20px rgb(137, 139, 141);
+    text-shadow: 0px 0px 1px rgb(75, 73, 73);
+}
+
+.apresentacao {
+    display: flex; /*junta as caixinhas */
+    
+   
+}
+
+/*
+.apresentacao {
+    width: 80vh;
+    padding: 30%;
+    display: flex;
+    justify-content: center ; /* juntando as duas caixinhas 
+    font-family: var(--fonte-principal);
+}*/
+
+
+
+
+.apresentacao__resultado {
+    background-image: linear-gradient(var(--cor-lilas), var(--cor-azul)); /* Usando gradiente */
+    border-radius: 20px;
+    width: 37%; 
+    
+}
+
+.titulo {
+    color: var(--cor-cinzaclaro);
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2em 0;
+   
+
+}
+
+.circulo { /* Procurar como estilizar isso aqui depois*/
+   margin: auto;
+   padding: 1.5em;
+   display: flex;
+   flex-direction: column;
+   background-image: linear-gradient(var(--violeta-circulo), var(--azul-circulo));
+   border-radius: 50%;
+   width: 6.25rem;
+   height: 6.25rem;
+   text-align: center; 
+   justify-content: center;
+
+   
+}
+
+.resultado {
+    color: var(--cor-branco);
+    font-weight: 800;
+    font-size: 3rem;
+    
+  
+}
+
+.resultado__maximo {
+    color: var(--cor-cinzaclaro); /* descobrir a cor dessa fonte aqui*/
+    font-weight: 700;
+    font-size: 1rem;
+    
+    
+}
+
+.apresentacao__subtitulo {
+    color: var(--cor-branco); /* descobrir a cor dessa fonte aqui*/
+    font-size: 1.5rem;
+    text-align: center; 
+    margin: 1em 0; 
+}
+
+.apresentacao__paragrafo {
+    color: var(--cor-cinzaclaro); /* descobrir a cor dessa fonte aqui*/
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center; 
+    justify-content: center; 
+    margin: 0 3em 3em 3em;
+}
+
+.apresentacao__sumario {
+    background: var(--cor-branco);
+    border-radius: 20px;
+    width: 30%; 
+    padding: 2em;
+    
+}
+
+
+.titulo__sumario {
+    color: var(--cor-azulcinzaescuro);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 4em;
+  
+}
+
+
+.minha__pontuação {
+    color:var(--cor-azulcinzaescuro);
+}
+
+.pontuação_total {
+    color: var(--cor-cinzamaisclaro);
+}
+
+.container__vermelho {
+    display: flex;
+    background-color: var(--vermelho-maisclaro) ;
+    color: var(--vermelho-claro);
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    width: auto;
+   
+}
+
+.container__amarelo {
+    display: flex;
+    background-color: var(--laranja-amareloclaro);
+    color: var(--laranja-amarelo);
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container__verde {
+    display: flex;
+    background-color: var(--verde-claro) ;
+    color: var(--verde);
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container__azul {
+    display: flex;
+    background-color: var(--azul-cobaltoclaro);
+    color: var(--azul-cobalto);
+    padding: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    flex-basis: auto;
+   
+
+}
+
+.container_texto {
+   display: flex;
+   align-items: center;
+  
+}
+
+.container__vermelho,
+.container__amarelo,
+.container__verde,
+.container__azul {
+    margin: 1em 0;
+    width: 80%;
+    
+}
+
+.botão {
+    width: 90%;
+    border: none;
+    color: var(--cor-branco);
+    background-color: var(--cor-azulcinzaescuro);
+    padding: 1em 0;
+    border-radius: 20px;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 0.8;
+    margin-top: 1em;
+    
+    
+}
+
+@media screen and (max-width: 600px) {
+
+   body {
+    border: 2px solid;
+   }
+
+   
+
+    .apresentacao {
+        
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width:100vh ;
+        height: 100vh ;
+        
+    }
+
+   
+}
+
+
+
+/* 
+color: hsl(224, 30%, 27%); Cinza escuro
+color: 
+*/
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
